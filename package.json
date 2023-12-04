@@ -1,0 +1,15 @@
+{
+  "name": "livingspace",
+  "version": "1.0.0",
+  "description": "Capstone Project RevoU",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "GRUP 16",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
