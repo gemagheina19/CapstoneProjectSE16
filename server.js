@@ -9,6 +9,8 @@ const lsroomRoutes = require('./routes/lsroomRoutes'); // Tambahkan ini
 const testingRoutes = require('./routes/testingRoutes'); // Sesuaikan dengan path yang benar
 const testingejsRoutes = require('./routes/testingejsRoutes');
 
+const indexRoutes = require('./routes/indexRoutes');
+
 
 
 
@@ -16,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
+app.set('views', './views');
 app.use(express.static('public'));
 
 
@@ -43,4 +46,9 @@ app.get('/', (req, res) => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Internal Server Error');
+});
+
+
+app.get('/', (req, res) => {
+  res.render('index'); // Merender file 'index.ejs'
 });
