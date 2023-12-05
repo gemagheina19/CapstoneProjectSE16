@@ -1,20 +1,18 @@
 const express = require('express');
 const app = express();
-const port = 3000; // atau port yang Anda inginkan
+const port = 3000;
 
-// Data Kota (Contoh: Statik)
-const cities = [
-  { id: 1, name: 'Jakarta', image: 'url-to-jakarta-image.jpg' },
-  { id: 2, name: 'Surabaya', image: 'url-to-surabaya-image.jpg' },
-  // tambahkan kota lain sesuai kebutuhan
-];
+const cityRoutes = require('./routes/cityRoutes');
+const paketRoutes = require('./routes/paketRoutes');
+const lsroomRoutes = require('./routes/lsroomRoutes'); // Tambahkan ini
 
-// Endpoint static API untuk data kota
-app.get('/api/cities', (req, res) => {
-  res.json(cities);
-});
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// Mulai server
+app.use('/city', cityRoutes);
+app.use('/paket', paketRoutes);
+app.use('/lsroom', lsroomRoutes); // Tambahkan ini
+
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
 });
