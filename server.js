@@ -70,3 +70,7 @@ app.get('/bandung-utara', (req, res) => {
 app.get('/booking-detail', (req, res) => {
   res.render('booking-detail'); // Merender file 'Booking Detail'
 });
+
+app.get('/pembayaran1', (req, res) => {
+  res.render('pembayaran1'); // Merender file 'pembayaran1'
+});
