@@ -62,3 +62,7 @@ app.get('/welcome', (req, res) => {
 app.get('/login', (req, res) => {
   res.render('login'); // Merender file 'login.ejs'
 });
+
+app.get('/bandung-utara', (req, res) => {
+  res.render('lsroom'); // Merender file 'ls room / Bandung Utara'
+});
