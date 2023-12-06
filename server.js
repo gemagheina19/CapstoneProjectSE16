@@ -11,6 +11,7 @@ const testingejsRoutes = require('./routes/testingejsRoutes');
 
 const indexRoutes = require('./routes/indexRoutes');
 const welcomeRoutes= require('./routes/welcomeRoutes');
+const login = require('./routes/loginRoutes');
 
 
 app.use(express.json());
@@ -55,5 +56,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/welcome', (req, res) => {
-  res.render('welcome'); // Merender file 'index.ejs'
+  res.render('welcome'); // Merender file 'welcome.ejs'
+});
+
+app.get('/login', (req, res) => {
+  res.render('login'); // Merender file 'login.ejs'
 });
