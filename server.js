@@ -74,3 +74,7 @@ app.get('/booking-detail', (req, res) => {
 app.get('/pembayaran1', (req, res) => {
   res.render('pembayaran1'); // Merender file 'pembayaran1'
 });
+
+app.get('/pembayaran2', (req, res) => {
+  res.render('pembayaran2'); // Merender file 'pembayaran2'
+});
