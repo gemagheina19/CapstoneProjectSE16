@@ -13,6 +13,8 @@ const indexRoutes = require('./routes/indexRoutes');
 const welcomeRoutes= require('./routes/welcomeRoutes');
 const login = require('./routes/loginRoutes');
 
+const pembayaran1 = require('./routes/pembayaran1Routes');
+const pembayaran2 = require('./routes/pembayaran2Routes');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
