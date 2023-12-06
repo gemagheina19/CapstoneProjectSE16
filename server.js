@@ -10,8 +10,7 @@ const testingRoutes = require('./routes/testingRoutes'); // Sesuaikan dengan pat
 const testingejsRoutes = require('./routes/testingejsRoutes');
 
 const indexRoutes = require('./routes/indexRoutes');
-
-
+const welcomeRoutes= require('./routes/welcomeRoutes');
 
 
 app.use(express.json());
@@ -53,4 +52,8 @@ app.use((err, req, res, next) => {
 
 app.get('/', (req, res) => {
   res.render('index'); // Merender file 'index.ejs'
+});
+
+app.get('/welcome', (req, res) => {
+  res.render('welcome'); // Merender file 'index.ejs'
 });
