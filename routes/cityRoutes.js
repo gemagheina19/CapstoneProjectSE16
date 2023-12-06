@@ -32,7 +32,7 @@ router.post('/', (req, res) => {
   res.status(201).json(newCity);
 });
 
-// Endpoint PUT untuk memperbarui data city berdasarkan ID
+// Endpoint PUT untuk memperbarui data city berdasarkan ID atau nama
 router.put('/:identifier', (req, res) => {
   const identifier = req.params.identifier.toLowerCase();
   const updatedCity = req.body;
@@ -47,7 +47,7 @@ router.put('/:identifier', (req, res) => {
   }
 });
 
-// Endpoint DELETE untuk menghapus data city berdasarkan ID
+// Endpoint DELETE untuk menghapus data city berdasarkan ID atau nama
 router.delete('/:identifier', (req, res) => {
   const identifier = req.params.identifier.toLowerCase();
   const index = cities.findIndex(c => c.id === parseInt(identifier) || c.cityName.toLowerCase() === identifier);
