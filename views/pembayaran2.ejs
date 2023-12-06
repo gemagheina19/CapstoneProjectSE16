@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandung | Living Space</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/pagebayar.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    /> -->
+    <!-- Google Font -->
+</head>
+
+<body>
+
+    <header class="header">
+        <a href="" class="logo"><i class="fas fa-home"></i>LivingSpace.</a>
+
+
+        <nav class="navigation">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="#home">Home</a>
+            <a href="#">About</a>
+            <a href="#facilities">Facilites</a>
+            <a href="#location">Location</a>
+            <a href="#typeourrooms">Our Rooms</a>
+            <a href="login.html" class="fas fa-user"> Login </a>
+            
+        </nav>
+
+        <div class="icons">
+            <div id="menu_btn" class="fas fa-bars"></div>
+
+            <div id="search" class="fas fa-search"></div>
+            
+
+            <i ></i>
+        </div>
+    </header>
+
+    <div class="search-form">
+        <div id="close-search" class="fas fa-times"></div>
+        <form action="">
+            <input type="search" name="" placeholder="Search..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    
+
+
+
+    <section id="home" class="home">
+        
+                    <div class="second-box" id="second-box" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pencarian/bandung.jpg) no-repeat;">
+                    <div class="content">
+                        <span>LIVING SPACE</span>
+                        <h3>BANDUNG UTARA</h3>
+                        
+                        
+                    </div>
+                  
+                    </div>
+               
+    </section>
+
+
+    <div class="ajukan-sewa-section"> 
+        <section class="sewa" id="sewa">
+            <div class="booking-request-form__content">
+                <h5 class="heading-featured-in">PEMBAYARAN</h5>
+                <div class="booking-request-form__steps">
+                    <ol class="c-stepper">
+                        <li class="c-stepper__item">
+                            <h1 class="c-stepper__title">Ajukan Sewa</h1>
+                        </li>
+                        <li class="c-stepper__item">
+                            <h2 class="c-stepper__title">Pemilik Menyetujui</h2>
+                        </li>
+                        <li class="c-stepper__item">
+                            <h3 class="c-stepper__title">Bayar Sewa</h3>
+                        </li>
+                        <li class="c-stepper__item">
+                            <h4 class="c-stepper__title">Check-in</h4>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="kotak">
+                <!-- isi disini -->
+                <div class="row">
+                    <h2> <img src="img/cheklis.svg"> Instruksi Pembayaran</h2>
+                </div>
+                <form>
+                        <table>
+                            <tr>
+                                <td><strong> Lakukan Pembayaran ke </strong> <br>
+                                    <a>BCA virtual account</a></td>
+                                <td id="kotak"> <p>
+                                        &emsp;7383 2763 62626 
+                                        &emsp; &nbsp; <img src="img/bca.svg"> </p>  </td>
+                            </tr>
+
+                            <tr>
+                                <td><strong> Batas Akhir Pembayaran  </strong> <br>
+                                    <a>Selesaikan Pembayaran Sebelumnya</a></td>
+                                <td id="kotak">  <p id="hariTanggalWaktu" ></p>
+                                        <script src="script.js"></script> </p></div>
+                                    </td>
+                            </tr>
+
+                            <tr id="button">
+                                    <td><strong> Total Pembayaran </strong> <br>
+                                    </td><td id="kotak"> <p>
+                                        &emsp;RP. 800.000 </p>  </td>
+
+                            <tr>
+                                <td>
+                                <button type="button" onclick="togglePopup()"><strong>Cara Pembayaran</strong></button>
+                                </td>
+                            </tr> 
+                        </table>
+                        <p id="tulisan_kanan"> *Pastikan anda sudah menyelesaikan pembayaran</p>
+                    </form>
+            </div>
+        </section>
+        
+        
+
+        <div class="frame">
+            <div class="div">
+              <div class="overlap-group">
+                <div class="div-2">
+                  <div class="bayar">Total Pembayaran </div>
+                  <div class="bayar">RP 800.000</div>
+                </div>
+              </div>
+              <div class="overlap">
+                <div class="overlap-2">
+                  <img class="foto" src="img/booking/kosan.png" />
+                  <div class="paket">Paket A</div>
+                </div>
+                <div class="lokasi">Living Space Bandung Utara</div>
+                <p class="fasilitas">
+                  KAMAR MANDI LUAR, NON AC, Wifi, Standar fasilities
+                </p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    
+<!-– PopUp Button Cara Pembayaran -–>
+    <div class="popup" id="popup">
+                    <div class="popup-content">
+                        <span class="close" onclick="togglePopup()">&times;</span>
+                        <h2>Cara Pembayaran</h2>
+                        <p>1. Pilih <strong>m-Transfer > BCA Virtual Account</strong></p>
+                        <p>2. Masukkan <strong>nomor Virtual Account (7383 2763 62626)</strong> dan pilih <strong> Send </strong></p>
+                        <p>3. Masukkan <strong>nominal</strong> yang sesuai pada kost</p>
+                        <p>4. Masukkan PIN m-BCA Anda dan pilih <strong>OK</strong></p>
+                        <p>5. Screenshot Bukti Pembayaran Anda</p>
+                    </div>
+            </div>
+
+            <section class="footer">
+
+                <div class="rowfooter">
+            
+                    
+                    <div class="colfooter"> 
+                        <img src="logo.png" alt="logofooter" class="logofooter">
+                        <p>Living Space is a company that provides environmentally friendly and comfortable housing.</p>
+                    </div>
+            
+                    <div class="colfooter"> 
+            <h3>Office <div class="underlinefooter"><span></span></div></h3>
+            <p>Jl. Merdeka</p>
+            <p>Jakarta Selatan</p>
+            <p>DKI Jakarta, 51121</p>
+            <p class="email-idfooter"><a href="mailto:tes@contoh.com">living@space.com</a></p>
+            <h4><a href="https://wa.me/6281255556254">+62-81255556254</a></h4>
+            
+                    </div>
+            
+            
+                    <div class="colfooter">
+                        <h3>Links <div class="underlinefooter"><span></span></div></h3>
+            
+                        <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#typeourroom">Our Rooms</a></li>
+                        <li><a href="">Contact</a></li>
+                         
+            
+            
+            
+                        </ul>
+                    </div>
+            
+            
+                    <div class="colfooter">
+                        
+                    <h3>Get Good Deals <div class="underlinefooter"><span></span></div></h3>
+                    <form>
+                        <i class="far fa-envelope"></i>
+                        <input type="email" placeholder="Input Your Email" required>
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                    <div class="social-iconsfooter">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wa.me/6281255556254"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+            
+                    </div>
+            
+            
+                    </div>
+                </div>
+            
+            <hr>
+            <p class="copyrightfooter">RevoU Grup 16 © 2023</p>
+            </section>
+        
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
