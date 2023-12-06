@@ -66,3 +66,7 @@ app.get('/login', (req, res) => {
 app.get('/bandung-utara', (req, res) => {
   res.render('lsroom'); // Merender file 'ls room / Bandung Utara'
 });
+
+app.get('/booking-detail', (req, res) => {
+  res.render('booking-detail'); // Merender file 'Booking Detail'
+});
