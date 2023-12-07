@@ -12,6 +12,7 @@ const testingejsRoutes = require('./routes/testingejsRoutes');
 const indexRoutes = require('./routes/indexRoutes');
 const welcomeRoutes= require('./routes/welcomeRoutes');
 const login = require('./routes/loginRoutes');
+const detail = require('./routes/detailRoutes');
 
 const pembayaran1 = require('./routes/pembayaran1Routes');
 const pembayaran2 = require('./routes/pembayaran2Routes');
@@ -79,4 +80,8 @@ app.get('/pembayaran1', (req, res) => {
 
 app.get('/pembayaran2', (req, res) => {
   res.render('pembayaran2'); // Merender file 'pembayaran2'
+});
+
+app.get('/detail', (req, res) => {
+  res.render('detail'); // Merender file 'detail rooms'
 });

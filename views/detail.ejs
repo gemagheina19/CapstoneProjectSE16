@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paket A - Bandung Selatan Detail | Living Space</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/detail-rooms.css">
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo"><i class="fas fa-home"></i>LivingSpace.</a>
+        <nav class="navigation">
+            <div id="nav-close" class="fas fa-times"></div>
+            <a href="#home">Home</a>
+            <a href="#">About</a>
+            <a href="#facilities">Facilites</a>
+            <a href="#location">Location</a>
+            <a href="#typeourrooms">Our Rooms</a>
+            <a href="login.html" class="fas fa-user"> Login </a>      
+        </nav>
+
+        <div class="icons">
+            <div id="menu_btn" class="fas fa-bars"></div>
+            <div id="search" class="fas fa-search"></div>
+        </div>
+    </header>
+
+    <div class="search-form">
+        <div id="close-search" class="fas fa-times"></div>
+        <form action="">
+            <input type="search" name="" placeholder="Search..." id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+    </div>
+    
+    <section id="home" class="home">
+        <div class="second-box" id="second-box" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(img/pencarian/bandung.jpg) no-repeat;">
+            <div class="content">
+            <h1>Living Space Bandung Utara</h1>
+                <ul>
+                    <li>semua tipe kost</li>
+                    <li>bulanan</li>
+                    <li>aturan kos</li>
+                    <li>fasilitas</li>
+                </ul>             
+            </div>
+    </section>
+
+    <section id ="detail-room">
+        <h1>PAKET A</h1>
+        <div class="image-grid">
+            <img src="img/type/type-a.jpg" alt="Image 1">
+            <img src="img/detailkamar/km.jpg" alt="Image 2">
+            <img src="img/detailkamar/rt.jpg" alt="Image 3">
+            <img src="img/detailkamar/dapur.jpeg" alt="Image 4">
+            <img src="img/detailkamar/meja.jpeg" alt="Image 5">
+            <img src="img/detailkamar/luar.jpeg" alt="Image 6">
+          </div>
+
+    <div class="container">
+        <div class="list-col">
+          <p>
+            <i class="fas fa-calendar"></i> 
+            <span>Mingguan, Bulanan, Per 3 bulan, Per 6 bulan, Tahunan</span>
+          </p>
+          <p>
+            <i class="fas fa-bath"></i> 
+                    <span>KAMAR MANDI LUAR</span>
+          </p>
+          <p>
+            <i class="fas fa-snowflake"></i> 
+            <span> NON AC</span>
+          </p>
+          <p>
+            <i class="fas fa-wifi"></i> 
+            <span>Wifi</span>
+          </p>
+          <p>
+            <i class="fas fa-check-circle"></i> 
+            <span> Standar Fasilitas</span>
+          </p>
+         
+            <div class="fasilitas">
+                <h2>Fasilitas umum</h2>
+                    <p>dispenser<p>
+                    <p>TV</p>
+                    <p>CCTV</p>
+                    <P>R.Tamu</P>
+                    <p>Dapur</p>
+                    <p>Penjaga Kos</p>
+                    <p>Mesin Cuci</p>
+                    <p>Kulkas</p>
+            </div>
+            <div class="aturan">
+                <h2>Peraturan khusus tipe kamar ini</h2>
+                    <ul>
+                        <li>Tamu boleh menginap</li>
+                        <li>Tamu menginap dikenakan biaya</li>
+                        <li>Tipe ini bisa diisi maks. 2 orang/ kamar</li>
+                        <li>Tidak untuk pasutri</li>
+                        <li>Tidak boleh bawa anak</li>
+                        <li>Ada jam malam</li>
+                        <li>Deposit Rp300.000 (Dikembalikan di akhir periode sewa jika tidak ditemukan kerusakan pada kamar.)</li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="book-col">
+            <div class="card-booking">
+                <div class="card-header">
+                    <h2>Booking Your Room</h2>
+                    <span>Rp800.000/Bulan</span>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="check-in">Check-in :</label>
+                            <input type="date" id="check-in" name="check-in" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="rentalPeriod">Periode Sewa :</label>
+                            <select id="rentalPeriod" name="rental-period" required>
+                             <option value="0"></option>
+                              <option value="1">1 Bulan</option>
+                              <option value="3">3 Bulan</option>
+                              <option value="6">6 Bulan</option>
+                              <option value="12">1 Tahun</option>
+                            </select>
+                        </div class="form-group">
+                    
+            
+                        <label for="totalPayment">Total Pembayaran:</label>
+                        <span id="totalPayment">Rp</span>
+
+                        <button type="submit">Ajukan Sewa</button>
+                    </form>
+                </div>
+            </div>  
+
+        </div>
+    </div>
+</div>
+</section>
+
+<section class="footer">
+
+    <div class="rowfooter">
+
+        
+        <div class="colfooter"> 
+            <img src="logo.png" alt="logofooter" class="logofooter">
+            <p>Living Space is a company that provides environmentally friendly and comfortable housing.</p>
+        </div>
+
+        <div class="colfooter"> 
+<h3>Office <div class="underlinefooter"><span></span></div></h3>
+<p>Jl. Merdeka</p>
+<p>Jakarta Selatan</p>
+<p>DKI Jakarta, 51121</p>
+<p class="email-idfooter"><a href="mailto:tes@contoh.com">living@space.com</a></p>
+<h4><a href="https://wa.me/6281255556254">+62-81255556254</a></h4>
+
+        </div>
+
+
+        <div class="colfooter">
+            <h3>Links <div class="underlinefooter"><span></span></div></h3>
+
+            <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#facilities">Facilities</a></li>
+            <li><a href="#location">Location</a></li>
+            <li><a href="#typeourroom">Our Rooms</a></li>
+            <li><a href="">Contact</a></li>
+             
+
+
+
+            </ul>
+        </div>
+
+
+        <div class="colfooter">
+            
+        <h3>Get Good Deals <div class="underlinefooter"><span></span></div></h3>
+        <form>
+            <i class="far fa-envelope"></i>
+            <input type="email" placeholder="Input Your Email" required>
+            <button type="submit"><i class="fas fa-arrow-right"></i></button>
+        </form>
+        <div class="social-iconsfooter">
+            <a href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://wa.me/6281255556254"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com"><i class="fab fa-instagram"></i></a>
+
+        </div>
+
+
+        </div>
+    </div>
+
+<hr>
+<p class="copyrightfooter">RevoU Grup 16 © 2023</p>
+</section>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/detail-rooms.js"></script>
+</body>
+</html>
