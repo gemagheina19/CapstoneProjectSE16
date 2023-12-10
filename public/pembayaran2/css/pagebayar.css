@@ -408,8 +408,8 @@ gap: 1.5rem;
      text-align: center;
  }
 
-.booking-request-form__steps {
-    background-color: rgba(224, 224, 224, 0.932);
+ .booking-request-form__steps {
+    background-color: rgb(255, 255, 255);
     margin:0;
     padding:20px 0px 20px;
 }
@@ -417,19 +417,19 @@ gap: 1.5rem;
 div {
     display: block;
 }
-
+/* strepper css */
 .c-stepper {
     display: flex;
     flex-wrap: wrap;
-  }
-  
+}
+
 .c-stepper__item {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  
+}
+
 .c-stepper__item:before {
     --size: 40px;
     content: "";
@@ -441,57 +441,41 @@ div {
     border-radius: 50%;
     margin: 1rem auto 0;
     background-color: rgb(255, 255, 255);
-    border: 4px solid #1baa57;
-  }
+    border: 2px solid #1baa57;
+}
 
+.c-stepper__item.active:before {
+    background-color:  #1baa57;
+    border-color: #1baa57;
+}
+/*  */
+.c-stepper__item.active ~ .c-stepper__item:after {
+    background-color: #1baa57;
+}
+
+/* css warna garis */
 .c-stepper__item:not(:last-child):after {
     content: "";
     position: relative;
     top: 3rem;
     left: 50%;
-    height: 2px;
-    background-color: #1baa57;
+    height: 3px;
+    background-color: #1baa57; 
     order: -1;
-  }
-  
+}
+
+.c-stepper__item.active ~ .c-stepper__item:after {
+    background-color:  rgb(230, 230, 230); /* Putih saat elemen setelah elemen aktif */
+}
 .c-stepper {
     --size: 50px;
     --spacing: 1.8px;
-    
 }
 
-.c-stepper__item:not(:last-child):after {
-    width: calc(100% - var(--size) - calc(var(--spacing) * 2));
-    left: calc(50% + calc(var(--size) / 2 + var(--spacing)));
-}
 
-.c-stepper__item h1 {
-        display: block;
-        font-size: 1.5em;
-        margin-block-start: 0.83em;
-        margin-block-end: 0.83em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-}
-.c-stepper__item h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.c-stepper__item h3 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
+.c-stepper__item h1,
+.c-stepper__item h2,
+.c-stepper__item h3,
 .c-stepper__item h4 {
     display: block;
     font-size: 1.5em;
@@ -501,13 +485,23 @@ div {
     margin-inline-end: 0px;
     font-weight: bold;
 }
+@media screen and (max-width: 768px) {
+    .ajukan-sewa-section {
+        flex-direction: column;
+    }
+
+    .frame {
+        margin: 20px 0;
+    }
+}
 /* akhir book */
 /* css info penyewa */
 
 .booking-request-form__section[t] {
-    border-top: 8px solid #e8e8e8;
+    border-top: 8px solid #ffffff;
     padding: 24px 1px;
 }
+
 
 .booking-form-section__head[r] {
     align-items: center;
@@ -703,6 +697,7 @@ div {
     font-weight: 300;
     line-height: normal;
     text-align: right;
+    font-family: 'Poppins',sans-serif;
 }
 
 
@@ -758,6 +753,7 @@ div {
 }
 .p {
     font-size: 200px;
+    font-family: 'Poppins',sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -820,7 +816,7 @@ div {
     width: 302px;
     height: 28px;
     margin-top: -10px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins-SemiBold", sans-serif;
     font-weight: 600;
     color: #000000;
     font-size: 20px;
@@ -855,13 +851,13 @@ div {
   
   .frame .paket {
     position: absolute;
-    width: 132px;
+    width: 140px;
     top: 0;
     left: 220px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: 'Poppins',sans-serif;
     font-weight: 550;
     color: #000000;
-    font-size: 35px;
+    font-size: 32px;
     letter-spacing: 0;
     line-height: normal;
   }
@@ -871,7 +867,7 @@ div {
     width: 150px;
     top: 40px;
     left: 220px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins-SemiBold", sans-serif;
     font-weight: 400;
     color: #5E5E5E;
     font-size: 20px;
@@ -886,7 +882,7 @@ div {
     width: 270px;
     top: 70px;
     left: 220px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: 'Poppins',sans-serif;
     font-weight: 650;
     color: #545454;
     font-size: 17px;
@@ -1440,7 +1436,6 @@ hr{
     position: absolute;
     top: 0;
     left: 10px;
-    animation: moving 2s linear infinite;
 
 }
 

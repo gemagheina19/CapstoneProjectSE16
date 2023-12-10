@@ -175,20 +175,3 @@ function validateAndSubmit() {
 
   console.log('Formulir berhasil diajukan!');
 }
-// strepper func
-function setActiveStep(stepId) {
-  const steps = document.querySelectorAll('.c-stepper__item');
-  const activeStep = document.getElementById(stepId);
-  activeStep.classList.add('active');
-
-  // Tambahkan aturan berikut untuk menandai bahwa tombol "Sewa" telah ditekan
-  if (stepId === 'step2') {
-      const step1 = document.getElementById('step1');
-      step1.classList.add('active-after-sewa');
-      step1.nextElementSibling.classList.add('after-sewa');
-  }
-}
-
-document.getElementById('buttonSewa').addEventListener('click', function() {
-  setActiveStep('step2');
-});

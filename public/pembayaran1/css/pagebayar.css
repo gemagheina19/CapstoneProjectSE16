@@ -409,8 +409,8 @@ gap: 1.5rem;
      margin-bottom: 20px;
  }
 
-.booking-request-form__steps {
-    background-color: rgba(224, 224, 224, 0.932);
+ .booking-request-form__steps {
+    background-color: rgb(255, 255, 255);
     margin:0;
     padding:20px 0px 20px;
 }
@@ -418,19 +418,19 @@ gap: 1.5rem;
 div {
     display: block;
 }
-
+/* strepper css */
 .c-stepper {
     display: flex;
     flex-wrap: wrap;
-  }
-  
+}
+
 .c-stepper__item {
     flex: 1;
     display: flex;
     flex-direction: column;
     text-align: center;
-  }
-  
+}
+
 .c-stepper__item:before {
     --size: 40px;
     content: "";
@@ -442,57 +442,41 @@ div {
     border-radius: 50%;
     margin: 1rem auto 0;
     background-color: rgb(255, 255, 255);
-    border: 4px solid #1baa57;
-  }
+    border: 2px solid #1baa57;
+}
 
+.c-stepper__item.active:before {
+    background-color:  #1baa57;
+    border-color: #1baa57;
+}
+/*  */
+.c-stepper__item.active ~ .c-stepper__item:after {
+    background-color: #1baa57;
+}
+
+/* css warna garis */
 .c-stepper__item:not(:last-child):after {
     content: "";
     position: relative;
     top: 3rem;
     left: 50%;
-    height: 2px;
-    background-color: #1baa57;
+    height: 3px;
+    background-color: #1baa57; 
     order: -1;
-  }
-  
+}
+
+.c-stepper__item.active ~ .c-stepper__item:after {
+    background-color:  rgb(230, 230, 230); /* Putih saat elemen setelah elemen aktif */
+}
 .c-stepper {
     --size: 50px;
     --spacing: 1.8px;
-    
 }
 
-.c-stepper__item:not(:last-child):after {
-    width: calc(100% - var(--size) - calc(var(--spacing) * 2));
-    left: calc(50% + calc(var(--size) / 2 + var(--spacing)));
-}
 
-.c-stepper__item h1 {
-        display: block;
-        font-size: 1.5em;
-        margin-block-start: 0.83em;
-        margin-block-end: 0.83em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;
-        font-weight: bold;
-}
-.c-stepper__item h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-.c-stepper__item h3 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
+.c-stepper__item h1,
+.c-stepper__item h2,
+.c-stepper__item h3,
 .c-stepper__item h4 {
     display: block;
     font-size: 1.5em;
@@ -519,7 +503,7 @@ div {
     font-size: 20px;
     font-weight: 900;
     line-height: 28px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -557,7 +541,7 @@ div {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -572,7 +556,7 @@ div {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -606,7 +590,7 @@ div {
     display: none!important;
 }
 .body, button {
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .button-sewa:hover {
     background: red;
@@ -657,7 +641,7 @@ div {
     width: 202px;
     height: 28px;
     margin-top: -10px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: 'Poppins',sans-serif;
     font-weight: 600;
     color: #000000;
     font-size: 18px;
@@ -695,10 +679,10 @@ div {
     width: 132px;
     top: 0;
     left: 190px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: 'Poppins',sans-serif;
     font-weight: 550;
     color: #000000;
-    font-size: 30px;
+    font-size: 22px;
     letter-spacing: 0;
     line-height: normal;
   }
@@ -708,10 +692,10 @@ div {
     width: 150px;
     top: 40px;
     left: 190px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: "Poppins-SemiBold", sans-serif;
     font-weight: 400;
     color: #5E5E5E;
-    font-size: 17px;
+    font-size: 14px;
     text-align: center;
     letter-spacing: 0;
     line-height: 24.4px;
@@ -720,13 +704,13 @@ div {
   
   .frame .fasilitas {
     position: absolute;
-    width: 270px;
+    width: 200px;
     top: 70px;
     left: 190px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family: "Poppins-Medium", sans-serif;
     font-weight: 650;
     color: #545454;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 0;
     line-height: 25px;
   }
@@ -788,6 +772,7 @@ div {
     border-color: #000;
     float: left;
     text-align: left;
+    font-family: 'Poppins',sans-serif;
 }
 
 .container form .submit-btn2{
@@ -801,6 +786,7 @@ div {
     border-color: #000;
     float: left;
     text-align: center;
+    font-family: 'Poppins',sans-serif;
 }
 
 .container form .submit-btn:hover{
@@ -833,6 +819,25 @@ label {
     color: #000;
 }
 
+@media screen and (max-width: 600px) {
+    .logo-payment {
+        max-width: 100%;
+    }
+
+    .nama,
+    .nama2 {
+        font-size: 16px;
+    }
+    @media screen and (max-width: 600px) {
+        .logo-payment {
+            max-width: 100%;
+        }
+        .nama,
+        .nama2 {
+            font-size: 16px;
+        }
+    }
+}
 
 /* end css harga */
 /* css tabel 1 */
@@ -849,7 +854,7 @@ label {
     border-color:black;
     border-style:solid;
     border-width:1px;
-    font-family:Arial, sans-serif;
+    font-family: 'Poppins',sans-serif;
     font-size:14px;
     overflow:hidden;
     padding:20px 20px;
@@ -859,7 +864,7 @@ label {
     border-color:black;
     border-style:solid;
     border-width:1px;
-    font-family:Arial, sans-serif;
+    font-family: 'Poppins',sans-serif;
     font-size:18px;
     font-weight:normal;
     overflow:hidden;
@@ -877,6 +882,7 @@ label {
     border-bottom-color:  #cfcfcf;
     border-bottom-right-radius: 20px;
     font-size:18px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-5tbn {
     background-color:#c8f7c7;
@@ -887,6 +893,7 @@ label {
     vertical-align:center;
     border-top-right-radius: 20px;
     border-left-color: #c8f7c7;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-f9xn {
     background-color:#c8f7c7;
@@ -897,6 +904,7 @@ label {
     vertical-align:top;
     border-right-color: #c8f7c7;
     border-top-left-radius: 20px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-dqsh {
     background-color:#c8f7c7;
@@ -905,6 +913,7 @@ label {
     text-align:center;
     vertical-align:top;
     border-left-color: #cfcfcf;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-mi27 {
     background-color:#c8f7c7;
@@ -914,6 +923,7 @@ label {
     text-align:center;
     vertical-align:bottom;
     font-size:18px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-mi28 {
     background-color:#c8f7c7;
@@ -924,6 +934,7 @@ label {
     vertical-align:bottom;
     border-right-color: #cfcfcf;
     font-size:18px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-2xjn {
     background-color:#c8f7c7;
@@ -934,6 +945,7 @@ label {
     border-left-color: #cfcfcf;
     border-bottom-color:  #cfcfcf;
     border-bottom-left-radius: 18px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-8asn {
     background-color:#c8f7c7;
@@ -945,6 +957,7 @@ label {
     vertical-align:top;
     border-bottom-color:  #cfcfcf;
     font-size:16px;
+    font-family: 'Poppins',sans-serif;
 }
 .tg .tg-mi27,
 .tg .tg-mi28,
@@ -952,6 +965,57 @@ label {
 .tg .tg-8asn,
 .tg .tg-a12t {
     font-size: 1.1vw;}
+
+    @media only screen and (max-width: 768px) {
+        .ajukan-sewa-section {
+            flex-direction: column;
+        }
+    
+        .sewa, .frame {
+            margin: 0;
+        }
+    
+        .frame .content,
+        .sewa .content {
+            padding: 1rem;
+        }
+    
+        .booking-request-form__section[t] {
+            padding: 12px 1px;
+        }
+    
+        .booking-form-section__head[r] {
+            flex-direction: column;
+        }
+    
+        .bg-c-text--heading-5 {
+            font-size: 16px;
+            line-height: 22px;
+        }
+    .tg td,
+    .tg th {
+        padding: 10px;
+    }
+    .container form {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .container form .row .col {
+        flex: 1 1 100%; /* Full width for columns on smaller screens */
+    }
+    .tg td,
+    .tg th {
+        font-size: 16px; /* Adjust font size for smaller screens */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .tg td,
+    .tg th {
+        font-size: 16px; /* Further adjust font size for even smaller screens */
+    }
+}
+
 /* end */
  .packages{
      background: var(--cle-light);
@@ -1488,7 +1552,6 @@ hr{
     position: absolute;
     top: 0;
     left: 10px;
-    animation: moving 2s linear infinite;
 
 }
 

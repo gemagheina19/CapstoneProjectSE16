@@ -324,7 +324,23 @@ button {
     width: 100%;
    margin-top: 1rem;
 }
+@media screen and (max-width: 768px) {
+    /* Image Grid */
+    .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
+    /* Container */
+    .container {
+        flex-direction: column;
+    }
+
+    /* List Column and Book Column */
+    .list-col,
+    .book-col {
+        padding: 1rem;
+    }
+}
 .footer{
     margin: 0;
     padding: 0;
@@ -542,7 +558,6 @@ hr{
     position: absolute;
     top: 0;
     left: 10px;
-    animation: moving 2s linear infinite;
 
 }
 

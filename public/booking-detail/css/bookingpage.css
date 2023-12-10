@@ -377,6 +377,10 @@ gap: 1.5rem;
 .ajukan-sewa-section {
     display: flex;
   }
+
+*{
+    font-family: 'Poppins',sans-serif;
+}
   
   .sewa {
     flex: 1;
@@ -402,6 +406,7 @@ gap: 1.5rem;
     margin-bottom: 2.4rem;
     color: #000000;
     font-weight: bold;
+    font-family: 'Poppins',sans-serif;
 }
 .sewa .content{
      padding: 1rem 0;
@@ -460,7 +465,7 @@ div {
     top: 3rem;
     left: 50%;
     height: 3px;
-    background-color:#1baa57; 
+    background-color:rgb(230, 230, 230); 
     order: -1;
 }
 
@@ -486,6 +491,7 @@ div {
     font-weight: bold;
 }
 
+
 /* akhir book */
 /* css info penyewa */
 
@@ -503,7 +509,7 @@ div {
     font-size: 20px;
     font-weight: 900;
     line-height: 28px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -519,6 +525,7 @@ p {
 * {
     box-sizing: border-box;
     border: 0 solid transparent;
+    font-family: 'Poppins',sans-serif;
 }
 div {
     display: block;
@@ -541,7 +548,7 @@ div {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -556,7 +563,7 @@ div {
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
-    font-family: Lato,sans-serif;
+    font-family: 'Poppins',sans-serif;
 }
 .bg-c-text {
     margin: 0;
@@ -629,8 +636,9 @@ div {
     outline: 0;
     text-align: center;
     transition: .3s;
-    border-radius: 4px;
+    border-radius: 40px;
     overflow: visible;
+    font-family: 'Poppins',sans-serif;
 }
 .hidden-xs {
     display: none!important;
@@ -688,12 +696,13 @@ div {
     width: 302px;
     height: 28px;
     margin-top: -10px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family:'Poppins',sans-serif;
     font-weight: 600;
     color: #000000;
     font-size: 20px;
     letter-spacing: 0;
     line-height: normal;
+    
   }
   
   
@@ -723,13 +732,13 @@ div {
   
   .frame .paket {
     position: absolute;
-    width: 132px;
+    width: 140px;
     top: 0;
     left: 220px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family:'Poppins',sans-serif;
     font-weight: 550;
     color: #000000;
-    font-size: 35px;
+    font-size: 32px;
     letter-spacing: 0;
     line-height: normal;
   }
@@ -739,7 +748,7 @@ div {
     width: 150px;
     top: 40px;
     left: 220px;
-    font-family: "Poppins-SemiBold", Helvetica;
+    font-family: 'Poppins',sans-serif;
     font-weight: 400;
     color: #5E5E5E;
     font-size: 20px;
@@ -754,7 +763,7 @@ div {
     width: 270px;
     top: 70px;
     left: 220px;
-    font-family: "Poppins-Medium", Helvetica;
+    font-family:'Poppins',sans-serif;
     font-weight: 650;
     color: #545454;
     font-size: 17px;
@@ -782,6 +791,9 @@ div {
     .frame .content,
     .sewa .content {
         padding: 1rem;
+    }
+    .frame .lokasi {
+        font-size: 14px;
     }
 
     .booking-request-form__section[t] {
@@ -1342,7 +1354,6 @@ hr{
     position: absolute;
     top: 0;
     left: 10px;
-    animation: moving 2s linear infinite;
 
 }
 
