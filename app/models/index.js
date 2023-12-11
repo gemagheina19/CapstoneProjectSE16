@@ -20,4 +20,5 @@ db.sequelize = sequelize;
 
 // define semua models yang ada pada aplikasi
 db.cities = require('./city.model')(sequelize, Sequelize);
+db.package = require('./paket.model')(sequelize,Sequelize);
 module.exports = db;

@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 const cors = require('cors');
 const cityyRoute = require('./app/routes/city.routes');
+const pakettRoute = require('./app/routes/paket.routes');
+
 
 
 
@@ -40,7 +42,7 @@ app.use(cors());
 
 const db = require('./app/models');
 db.sequelize.sync();
-
+//
 
 
 
@@ -56,6 +58,8 @@ app.delete('/kota/:id', kotaController.deleteKotaById);
 
 
 app.use('/api/cities', cityyRoute);
+app.use('/api/package', pakettRoute);
+
 
 app.listen(port, () => {
   console.log(`Server berjalan di http://localhost:${port}`);
