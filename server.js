@@ -4,6 +4,7 @@ const port = 3000;
 const cors = require('cors');
 const cityyRoute = require('./app/routes/city.routes');
 const pakettRoute = require('./app/routes/paket.routes');
+const userRoute = require('./app/routes/user.routes');
 
 
 
@@ -59,6 +60,7 @@ app.delete('/kota/:id', kotaController.deleteKotaById);
 
 app.use('/api/cities', cityyRoute);
 app.use('/api/package', pakettRoute);
+app.use('/api/users', userRoute);
 
 
 app.listen(port, () => {
