@@ -2,10 +2,10 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const cors = require('cors');
-const cityRoute = require('./routes/city.routes');
+const cityyRoute = require('./app/routes/city.routes');
+const pakettRoute = require('./app/routes/paket.routes');
 
-const cityRoutes = require('./routes/cityRoutes');
-const sequelize = require('./config/database');
+
 
 
 
@@ -40,12 +40,11 @@ app.use(express.static('public'));
 app.use(cors());
 
 
-
-
-const db = require('./models');
+const db = require('./app/models');
 db.sequelize.sync();
+//
 
-app.use('/api/cities', cityRoute);
+
 
 
 //KOTA STATIC API
@@ -55,6 +54,11 @@ app.get('/kota/nama/:namaKota', kotaController.getKotaByNama);
 app.post('/kota', kotaController.createKota);
 app.put('/kota/:id', kotaController.updateKotaById);
 app.delete('/kota/:id', kotaController.deleteKotaById);
+
+
+
+app.use('/api/cities', cityyRoute);
+app.use('/api/package', pakettRoute);
 
 
 app.listen(port, () => {

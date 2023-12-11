@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { City } = require('../models/city'); // Pastikan path sesuai dengan struktur proyek Anda
 
 const cityController = {
   getCityPage: (req, res) => {

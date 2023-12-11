@@ -1,10 +1,10 @@
 const db = require("../models");
 const City = db.cities;
 
-// CREATE: untuk enambahkan data kedalam tabel city
+// CREATE: untuk enambahkan data kedalam tabel book
 exports.create = (req, res) => {
   // validate request
-  if (!req.body.cityName) {
+  if (!req.body.cityname) {
     return res.status(400).send({
       message: "Title can not be empty",
     });
@@ -12,22 +12,22 @@ exports.create = (req, res) => {
 
   // daya yang didapatkan dari inputan oleh pengguna
   const city = {
-    cityName: req.body.cityName,
+    cityname: req.body.cityname,
     images: req.body.images,
-   
+    //published: req.body.published ? req.body.published : false,
   };
 
   // proses menyimpan kedalam database
   City.create(city)
     .then((data) => {
       res.json({
-        message: "City created successfully.",
+        message: "Book created successfully.",
         data: data,
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: err.message || "Some error occurred while creating the City.",
+        message: err.message || "Some error occurred while creating the Book.",
         data: null,
       });
     });
@@ -38,13 +38,13 @@ exports.findAll = (req, res) => {
   City.findAll()
     .then((cities) => {
       res.json({
-        message: "City retrieved successfully.",
+        message: "Books retrieved successfully.",
         data: cities,
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: err.message || "Some error occurred while retrieving cities.",
+        message: err.message || "Some error occurred while retrieving books.",
         data: null,
       });
     });
@@ -59,19 +59,19 @@ exports.update = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.json({
-          message: "City updated successfully.",
+          message: "Book updated successfully.",
           data: req.body,
         });
       } else {
         res.json({
-          message: `Cannot update cITY with id=${id}. Maybe City was not found or req.body is empty!`,
+          message: `Cannot update book with id=${id}. Maybe book was not found or req.body is empty!`,
           data: req.body,
         });
       }
     })
     .catch((err) => {
       res.status(500).json({
-        message: err.message || "Some error occurred while updating the city.",
+        message: err.message || "Some error occurred while updating the book.",
         data: null,
       });
     });
@@ -86,19 +86,19 @@ exports.delete = (req, res) => {
     .then((num) => {
       if (num == 1) {
         res.json({
-          message: "city deleted successfully.",
+          message: "Book deleted successfully.",
           data: req.body,
         });
       } else {
         res.json({
-          message: `Cannot delete city with id=${id}. Maybe city was not found!`,
+          message: `Cannot delete book with id=${id}. Maybe book was not found!`,
           data: req.body,
         });
       }
     })
     .catch((err) => {
       res.status(500).json({
-        message: err.message || "Some error occurred while deleting the city.",
+        message: err.message || "Some error occurred while deleting the book.",
         data: null,
       });
     });
@@ -109,13 +109,13 @@ exports.findOne = (req, res) => {
   City.findByPk(req.params.id)
     .then((city) => {
       res.json({
-        message: "City retrieved successfully.",
+        message: "Book retrieved successfully.",
         data: city,
       });
     })
     .catch((err) => {
       res.status(500).json({
-        message: err.message || "Some error occurred while retrieving city.",
+        message: err.message || "Some error occurred while retrieving book.",
         data: null,
       });
     });
