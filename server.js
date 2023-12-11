@@ -37,6 +37,8 @@ app.use(express.static('public'));
 const db = require('./dbConfig');
 
 
+
+
 //KOTA STATIC API
 app.get('/kota', kotaController.getAllKota);
 app.get('/kota/:id', kotaController.getKotaById);
