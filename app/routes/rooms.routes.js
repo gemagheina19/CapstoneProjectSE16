@@ -1,4 +1,4 @@
-const roomsController = require('../controllers/city.controller');
+const roomsController = require('../controllers/rooms.controller');
 const router = require('express').Router();
 
 router.post('/', roomsController.create);

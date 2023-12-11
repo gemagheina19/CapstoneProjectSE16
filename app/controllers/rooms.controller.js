@@ -1,18 +1,20 @@
 const db = require("../models");
-const rooms = db.rooms;
+const Rooms = db.rooms;
 
 // CREATE: untuk enambahkan data kedalam tabel book
 exports.create = (req, res) => {
  
   // daya yang didapatkan dari inputan oleh pengguna
   const rooms = {
-    roomsdescription: req.body.packagerooms,
+    deskripsi: req.body.deskripsi,
+    fasilitas : req.body.fasilitas,
     images: req.body.images,
+    harga : req.body.harga,
     //published: req.body.published ? req.body.published : false,
   };
 
   // proses menyimpan kedalam database
-  rooms.create(rooms)
+  Rooms.create(rooms)
     .then((data) => {
       res.json({
         message: "Book created successfully.",
@@ -29,7 +31,7 @@ exports.create = (req, res) => {
 
 // READ: menampilkan atau mengambil semua data sesuai model dari database
 exports.findAll = (req, res) => {
-    rooms.findAll()
+    Rooms.findAll()
     .then((_rooms) => {
       res.json({
         message: "Books retrieved successfully.",
@@ -47,7 +49,7 @@ exports.findAll = (req, res) => {
 // UPDATE: Merubah data sesuai dengan id yang dikirimkan sebagai params 
 exports.update = (req, res) => {
   const id = req.params.id;
-  rooms.update(req.body, {
+  Rooms.update(req.body, {
     where: { id },
   })
     .then((num) => {
@@ -74,7 +76,7 @@ exports.update = (req, res) => {
 // DELETE: Menghapus data sesuai id yang dikirimkan
 exports.delete = (req, res) => {
   const id = req.params.id;
-  rooms.destroy({
+  Rooms.destroy({
     where: { id },
   })
     .then((num) => {
@@ -100,8 +102,8 @@ exports.delete = (req, res) => {
 
 // BONUS ===> Mengambil data sesuai id yang dikirimkan
 exports.findOne = (req, res) => {
-    rooms.findByPk(req.params.id)
-    .then((_rooms) => {
+    Rooms.findByPk(req.params.id)
+    .then((rooms) => {
       res.json({
         message: "Book retrieved successfully.",
         data: rooms,
