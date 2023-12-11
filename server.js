@@ -1,7 +1,11 @@
 const express = require('express');
 const app = express();
 const port = 3000;
+const cors = require('cors');
+const cityRoute = require('./routes/city.routes');
 
+const cityRoutes = require('./routes/cityRoutes');
+const sequelize = require('./config/database');
 
 
 
@@ -33,10 +37,15 @@ app.get('/', indexController.getPage);
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
+app.use(cors());
 
-const db = require('./dbConfig');
 
 
+
+const db = require('./models');
+db.sequelize.sync();
+
+app.use('/api/cities', cityRoute);
 
 
 //KOTA STATIC API
